@@ -66,3 +66,23 @@
     color: hsl(var(--foreground));
   }
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+  
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  #report-content {
+    max-width: 100%;
+  }
+}
